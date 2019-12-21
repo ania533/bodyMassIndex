@@ -1,0 +1,120 @@
+body {
+    /* Background pattern from Toptal Subtle Patterns */
+  background-color: gainsboro;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lato',sans-serif;
+}
+.wrapper{
+    width:100%;
+    padding: 40px 0;
+}
+.fas fa-calculator{
+    font-size: 100px;
+    color: black;
+    padding: 40px 0;
+}
+.bmi {
+    width: 450px;
+    font-size: 48px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#napis{
+    font-size: 25px;
+    font-weight: bold;
+    color:black;
+    text-align: center;
+}
+.solve {
+    float: left;
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    margin-left: 5px;
+    }
+    input[type=text]
+    input[type=search]{
+    width: 250px;
+    background-color: #efefef;
+    color:#666666;
+    border: 2px solid grey;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+     margin-top: 20px;
+    }
+
+    input[type=submit]{
+       width: 300px;
+        background-color:darkgreen;
+        font-size: 20px;
+        color: white;
+        padding: 15px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        letter-spacing: 3px;
+        margin-top: 20px;
+    }
+    input[type=submit].hover{
+        background-color: #37b93d;
+    }
+    input[type=search]{
+        float: right;
+        width: 180px;
+        margin-right: 10px;
+        font-size: 20px;
+        padding: 10px;
+        margin-top: 0px;
+
+    }
+    input[class=szukaj]{
+        width: 150px;
+        float: right;
+
+    }
+   .szukaj{
+       float: right;
+       margin-right: 0;
+       clear: both;
+       width: 150px;
+       background-color:darkgreen;
+       font-size: 20px;
+       color: white;
+       padding: 10px 10px;
+       margin-top: 0px;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+       letter-spacing: 3px;
+   }
+   .norma{
+       font-weight: bold;
+       margin-left:20px;
+       margin-top: 50px;
+       font-size: 23px;
+       padding: 15px 20px;
+   }
+   ul{
+       list-style-type: none;
+       padding: 20px;
+       margin-left:20px;
+       margin-top: 10px;
+       font-size: 18px;
+       line-height: 1.5;
+   }
+   .obrazek{
+       position: center;
+       text-align: center;
+       display: block;
+     justify-content: center;
+       align-items: center;
+       margin-left: 60px;
+       margin-right: 80px;
+
+   }
+
+footer {
+    float: left;
+}

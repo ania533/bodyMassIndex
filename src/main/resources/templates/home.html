@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:kg="http://www.w3.org/1999/xhtml"
+      xmlns:cm="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="home.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <title>Kalkulator.bmi</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="bmi">
+        <i class="fas fa-calculator"></i>
+        <span style="color: #c34f4f"> bmi</span>-online.com
+        <div style="clear: both;"></div>
+        </div>
+
+        <div class="research">
+            <form action="#" th:action="@{/wyszukiwanie}" th:object="${bodyMassIndex}" method="post">
+                <p> <input type="search" placeholder="wyszukiwanie" th:field="*{id}" /></p>
+                <p><input type="submit" class="szukaj" value="Szukaj" /></p>
+            </form>
+        </div>
+        <div class="solve">
+            <form action="#" th:action="@{/}" th:object="${bodyMassIndex}" method="post">
+         <div id="napis">Oblicz swoje BMI </div>
+                <p>Podaj swoją wagę w kg<input type="text" placeholder="waga"  required autofocus th:field="*{waga}"/></p>
+                <p>Podaj wzrost w cm<input type="text" placeholder="wzrost"  required  autofocus th:field="*{wzrost}" /></p>
+                <div class="radio">
+                    <input type="radio" value="FEMALE" id="gender1" th:field="*{sex}" />
+                    <label for="gender1">Female</label>
+                    <input type="radio" value="MALE" id="gender2" checked th:field="*{sex}"  />
+                    <label for="gender2">Male</label>
+                </div>
+                <p><input type="submit" value="OBLICZ" />
+            </form>
+            <span class="norma"> Zakresy wartości BMI:</span>
+            <ul>
+                <li> mniej niż 16 -  wygłodzenie </li>
+                <li> 17 - 18.49  -  niedowaga </li>
+                <li> 18.5 - 24.99 - wartość prawidłowa </li>
+                <li> 25 - 29.99  - nadwaga </li>
+                <li> 30 - 34.99 - I  stopień otyłości </li>
+                <li> 35 - 39.99 - II  stopień otyłości </li>
+                <li>   > 40        - skrajna otyłość </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+    <div class="obrazek">
+        <img src="bmi.jpg" alt="Wzór" width="695" height="461">
+    </div>
+</footer>
+</html>

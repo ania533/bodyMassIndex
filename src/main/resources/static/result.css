@@ -1,0 +1,80 @@
+body{
+    background-color: gainsboro;
+    color: black;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+}
+.kontener{
+    width: 100%;
+    padding: 40px 0;
+}
+.fas fa-calculator{
+    font-size: 100px;
+    color: black;
+    padding: 40px 0;
+}
+.bmi {
+    width: 450px;
+    font-size: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 0;
+}
+h1{
+    font-weight: bold;
+    font-size: 45px;
+    margin-left: 20px;
+    padding: 20px;
+
+}
+.wynik{
+    float: left;
+    width: 200px;
+    border-bottom: grey inset;
+    padding: 20px;
+    margin-left: 35px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+input[type=button] {
+    width: 200px;
+    background-color: darkgreen;
+    font-size: 20px;
+    color: #efefef;
+    border:none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+input[type=button].hover {
+    background-color: #37b93d;
+}
+.norma{
+    border: none;
+    float-displace: line;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 40px 20px;
+}
+ul{
+    list-style-type: none;
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+.obrazek{
+    position: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+}
+

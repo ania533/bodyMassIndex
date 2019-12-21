@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="result.css"/>
+    <title>Formularz</title>
+    </head>
+<body>
+    <p class="kontener">
+    <div class="bmi">
+    <i class="fas fa-calculator"></i>
+    <span style="color: #c34f4f"> bmi</span>-online.com
+    <div style="clear: both;"></div>
+    </div>
+    <h1>WYNIK:</h1>
+    <div class="wynik" th:each="bodyMassIndex: ${bodyMassIndex}">
+    <p th:text="'Waga: ' + ${bodyMassIndex.waga} +  kg "/></p>
+    <p th:text="'Wzrost: ' + ${bodyMassIndex.wzrost} +  cm"/></p>
+    <p th:text="'Płeć: ' + ${bodyMassIndex.sex}"/></p>
+    <p th:text="'Policzone BMI: ' + ${bodyMassIndex.policzoneBMI}"/></p>
+    <p th:text="'Id:  ' + ${bodyMassIndex.id}"/></p>
+    </div>
+    <div class="obrazek">
+        <img src="bmi.jpg" alt="Wzór" width="695" height="461">
+    </div>
+    <form action="#" th:action="@{/}" th:objet="${bodyMassIndex}" method="post">
+        <INPUT TYPE="button"  value="Wstecz" onclick="history.go(-1);">
+    </form>
+        <span class="norma"> Zakresy wartości BMI:</span>
+    <ul>
+        <li> mniej niż 16 -  wygłodzenie </li>
+        <li> 17 - 18.49  -  niedowaga </li>
+        <li> 18.5 - 24.99 -wartość prawidłowa </li>
+        <li> 25 - 29.99  - nadwaga </li>
+        <li> 30 - 34.99 - I  stopień otyłości </li>
+        <li> 35 - 39.99 - II  stopień otyłości </li>
+        <li>   >  40  - skrajna otyłość </li>
+    </ul>
+    </div>
+    </div>
+    </body>
+    </html>

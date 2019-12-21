@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="research.css">
+    <title>Wyszukiwanie</title>
+</head>
+<body>
+<div class="bmi">
+    <i class="fas fa-calculator"></i>
+    <span style="color: #c34f4f"> bmi</span>-online.com
+    <div style="clear: both;"></div>
+</div>
+<div class="wpis" th:each="wyszukiwanie: ${bodyMassIndex}">
+    <div th:text="'Id: ' +${wyszukiwanie.id}"></div>
+    <div th:text="'Waga: ' +${wyszukiwanie.waga}  + kg "></div>
+    <div th:text="'Wzrost: ' +${wyszukiwanie.wzrost} +  cm  "></div>
+    <div th:text="'Płeć: ' +${wyszukiwanie.sex}"></div>
+    <div th:text="'Policzone BMI: ' +${wyszukiwanie.policzoneBMI}"></div>
+    <p>
+        <p>
+        <form action="#" th:action="@{/wyszukiwanie}" th:objet="${bodyMassIndex}" method="post">
+            <input type="button" value="Wstecz" onClick="history.go(-1);" />
+        </form>
+    </p>
+    </a>
+
+
+</div>
+
+<div class="obrazek">
+    <img src="śniadanie.jpg" alt="Wzór" width="795" height="528">
+</div>
+</body>
+</html>
